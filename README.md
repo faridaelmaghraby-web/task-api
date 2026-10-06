@@ -2,8 +2,8 @@
 
 A RESTful task management API built with **Node.js, Express, MongoDB (Mongoose)** and **JWT authentication**, documented with **Swagger / OpenAPI 3**.
 
-- **Live API:** `https://<your-app>.onrender.com`
-- **Swagger docs:** `https://<your-app>.onrender.com/api-docs`
+- **Live API:** `https://task-api.onrender.com`
+- **Swagger docs:** `https://task-api.onrender.com/api-docs`
 - **Postman collection:** [`postman/task-api.postman_collection.json`](postman/task-api.postman_collection.json)
 
 ## Features
@@ -42,7 +42,7 @@ postman/                 Postman collection
 
 1. **Clone and install**
    ```bash
-   git clone https://github.com/<your-username>/task-api.git
+   git clone https://github.com/faridaelmaghraby-web/task-api.git
    cd task-api
    npm install
    ```
@@ -151,7 +151,7 @@ curl -X DELETE $BASE/api/tasks/$ID -H "Authorization: Bearer $TOKEN"
    - Build command: `npm install`
    - Start command: `npm start`
    - Environment variables: `MONGODB_URI`, `JWT_SECRET`, `JWT_EXPIRES_IN=1d`, `NODE_ENV=production`
-4. After deploy, verify `https://<your-app>.onrender.com/health` and `/api-docs`.
+4. After deploy, verify `https://task-api.onrender.com/health` and `/api-docs`.
 
 > Render's free tier sleeps after inactivity; the first request may take ~30-60 seconds.
 
