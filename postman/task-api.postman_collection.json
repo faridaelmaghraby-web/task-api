@@ -7,7 +7,7 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "http://localhost:3000"
+      "value": "https://task-k5scddo6i-task-api.vercel.app"
     },
     {
       "key": "token",

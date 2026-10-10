@@ -2,8 +2,8 @@
 
 A RESTful task management API built with **Node.js, Express, MongoDB (Mongoose)** and **JWT authentication**, documented with **Swagger / OpenAPI 3**.
 
-- **Live API:** `https://task-api.onrender.com`
-- **Swagger docs:** `https://task-api.onrender.com/api-docs`
+- **Live API:** `https://task-api.vercel.app`
+- **Swagger docs:** `https://task-api.vercel.app/api-docs`
 - **Postman collection:** [`postman/task-api.postman_collection.json`](postman/task-api.postman_collection.json)
 
 ## Features
@@ -143,17 +143,20 @@ curl -X DELETE $BASE/api/tasks/$ID -H "Authorization: Bearer $TOKEN"
 3. Run **Auth → Register** (or **Login**). The JWT is stored automatically in `token`.
 4. Run the **Tasks** requests; **Create Task** stores `taskId` for the other requests.
 
-## Deployment (Render)
+## Deployment (free: Vercel + MongoDB Atlas)
 
-1. Create a free cluster on [MongoDB Atlas](https://www.mongodb.com/atlas), add a database user, and under *Network Access* allow `0.0.0.0/0`. Copy the connection string.
-2. Push this repository to GitHub.
-3. On [Render](https://render.com): **New → Web Service** → connect the repo (or use **Blueprint** with `render.yaml`).
-   - Build command: `npm install`
-   - Start command: `npm start`
-   - Environment variables: `MONGODB_URI`, `JWT_SECRET`, `JWT_EXPIRES_IN=1d`, `NODE_ENV=production`
-4. After deploy, verify `https://task-api.onrender.com/health` and `/api-docs`.
+Both services have free plans. The API runs on Vercel as a serverless function (`api/index.js` + `vercel.json`).
 
-> Render's free tier sleeps after inactivity; the first request may take ~30-60 seconds.
+1. **Database:** create a free **M0** cluster on [MongoDB Atlas](https://www.mongodb.com/atlas), add a database user, and under *Network Access* allow `0.0.0.0/0` (Vercel uses changing IPs). Copy the connection string and add a database name, e.g. `...mongodb.net/task-api?retryWrites=true&w=majority`.
+2. **Push to GitHub** (repository `task-api`).
+3. **Vercel:** sign in at [vercel.com](https://vercel.com) with GitHub, click **Add New -> Project**, import `task-api`, leave the framework preset as *Other*, and add these environment variables:
+   - `MONGODB_URI` (from step 1)
+   - `JWT_SECRET` (any long random string)
+   - `JWT_EXPIRES_IN` = `1d`
+4. Click **Deploy**. Your base URL is `https://<project>.vercel.app`.
+5. Verify `https://<project>.vercel.app/health` and `https://<project>.vercel.app/api-docs`.
+
+Alternative free hosts that also work with this repo as a normal Node server (`npm start`): Render's free web service (sleeps after inactivity, may ask for a card) or Railway (trial credit).
 
 ## License
 
