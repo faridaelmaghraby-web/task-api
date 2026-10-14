@@ -2,8 +2,8 @@
 
 A RESTful task management API built with **Node.js, Express, MongoDB (Mongoose)** and **JWT authentication**, documented with **Swagger / OpenAPI 3**.
 
-- **Live API:** `https://task-api.vercel.app`
-- **Swagger docs:** `https://task-api.vercel.app/api-docs`
+- **Live API:** `https://task-api-orcin.vercel.app`
+- **Swagger docs:** `https://task-api-orcin.vercel.app/api-docs`
 - **Postman collection:** [`postman/task-api.postman_collection.json`](postman/task-api.postman_collection.json)
 
 ## Features
@@ -153,10 +153,10 @@ Both services have free plans. The API runs on Vercel as a serverless function (
    - `MONGODB_URI` (from step 1)
    - `JWT_SECRET` (any long random string)
    - `JWT_EXPIRES_IN` = `1d`
-4. Click **Deploy**. Your base URL is `https://<project>.vercel.app`.
-5. Verify `https://<project>.vercel.app/health` and `https://<project>.vercel.app/api-docs`.
+4. Click **Deploy**. Your base URL is `https://task-api-orcin.vercel.app`.
+5. Verify `https://task-api-orcin.vercel.app/health` and `https://task-api-orcin.vercel.app/api-docs`.
 
-Alternative free hosts that also work with this repo as a normal Node server (`npm start`): Render's free web service (sleeps after inactivity, may ask for a card) or Railway (trial credit).
+
 
 ## License
 
