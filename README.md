@@ -2,8 +2,8 @@
 
 A RESTful task management API built with **Node.js, Express, MongoDB (Mongoose)** and **JWT authentication**, documented with **Swagger / OpenAPI 3**.
 
-- **Live API:** `https://task-api-orcin.vercel.app`
-- **Swagger docs:** `https://task-api-orcin.vercel.app/api-docs`
+- **Live API:** [https://task-api-orcin.vercel.app](https://task-api-orcin.vercel.app)
+- **Swagger docs:** [https://task-api-orcin.vercel.app/api-docs](https://task-api-orcin.vercel.app/api-docs)
 - **Postman collection:** [`postman/task-api.postman_collection.json`](postman/task-api.postman_collection.json)
 
 ## Features
